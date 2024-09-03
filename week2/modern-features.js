@@ -121,5 +121,5 @@ console.log(math, english, others);
 /* -- FUNCTIONS W/ DEFAULT PARAMETERS -- */
 const multiply = (a, b = 5) => a * b;
 
-console.log(multiply(8))
+console.log(multiply(8));
 console.log(multiply(8, 6));

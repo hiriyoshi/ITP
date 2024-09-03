@@ -18,13 +18,13 @@ setTimeout(() => {
 }, 3000); // 3 secs
 
 let counter = 0;
-// const threeSecondFunction = setInterval(() => {
-//     console.log("I'll appear in 3 seconds.");
-//     counter++;
+const threeSecondFunction = setInterval(() => {
+    console.log("I'll appear in 3 seconds.");
+    counter++;
 
-//     if (counter == 5)
-//         clearInterval(threeSecondFunction);
-// }, 3000) // 3 secs
+    if (counter == 5)
+        clearInterval(threeSecondFunction);
+}, 3000) // 3 secs
 
 // Callbacks
 const getData = (callback) => {
@@ -120,8 +120,3 @@ const performSteps = async () => {
         console.error("An error occurred:", error);
     }
 }
-
-/* 
-    Synchronous - Code Running Immediately
-    Asynchronous - Code with possible delays
-*/

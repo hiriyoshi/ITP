@@ -1,56 +1,15 @@
-import "./App.css";
-import Welcome from "./components/Welcome";
-import Hooks from "./components/Hooks";
+import React from 'react'
+// import LoginForm from './components/LoginForm';
+// import Hooks2 from './components/Hooks2';
+import FetchAPI from './components/FetchAPI';
 const App = () => {
-
-  
-  // const greeting = "Hello, React!";
-  // () = JSX
-  // {} = JS Code
-
-
-
   return (
     <div>
-      {
-        //ternary operator
-        // conditional formatting (? and :)
-        isUserLoggedIn 
-        ? <h1>Logged In!</h1>
-        : <h1>Not Logged In!</h1>
-      }
-
-      {
-        /* <h1>{greeting}</h1>
-      <Welcome  name="MIKO"/>
-      <Welcome  name="Mark"/> */
-
-        // conditional formatting (&&)
-        isUserLoggedIn && (
-          <ul>
-            <li>User 1</li>
-            <li>User 2</li>
-            <li>User 3</li>
-          </ul>
-        )
-      }
-      {
-        // conditional formatting (&&)
-        isUserLoggedIn && (
-          <ul>
-            {
-              // mapping
-              userList.map((user) => (
-                <li key={user}>{user}</li>
-              ))
-            }
-          </ul>
-        )
-      }
-      <Hooks />
+        {/* <LoginForm /> */}
+        {/* <Hooks2/> */}   
+        <FetchAPI/>
     </div>
   )
-
 }
 
 export default App;

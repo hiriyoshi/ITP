@@ -4,7 +4,7 @@ require("dotenv").config();
 // express, mongoose
 const express = require("express");
 const mongoose = require("mongoose");
-
+const cors = require("cors");
 const app = express();
 
 // Middleware
@@ -17,12 +17,18 @@ app.use((req, res, next) => {
     }
     next();
 });
-
+//Cors for querying/using different domains
+const corsOpts={
+    orgin: ["https://localhost:3000"],
+    methods:["GET","POST","PATCH","DELETE"],
+    allowedHeaders:["Content-Type"],
+    exposedHeaders:["Content-Type"],
+}
+app.use(cors(corsOpts));
 // Routes
 app.use("/posts",require('./src/routes/post'));
 
 // Server
-
 //password = "mongodb+srv://morita:mikomorita@testcluster.kw9pp.mongodb.net/?retryWrites=true&w=majority&appName=TestCluster"
 mongoose.connect("mongodb+srv://morita:mikomorita@testcluster.kw9pp.mongodb.net/?retryWrites=true&w=majority&appName=TestCluster")
     .then(() => {

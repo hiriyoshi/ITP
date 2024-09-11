@@ -44,7 +44,7 @@ const getPost=async (req,res)=>{
 const updatePost=async (req,res)=>{
     const {id}=req.params;
     try{
-        const post = await Post.findById(
+        const post = await Post.findByIdAndUpdate(
             {_id:id},
             {...req.body},
             {new: true,runValidators: true}
